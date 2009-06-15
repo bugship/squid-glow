@@ -1,0 +1,21 @@
+           .
+          .:.
+         .:::.
+        .:::::.
+    '    !!!!!    '
+     '.  !!!!!  .'
+       '.!!!!!.'
+        !!!!!!!
+    . ' !!!!!!! ' .
+   '    !!!!!!!    '
+        /     \
+       |  o o  |     <-- the glowing octo
+        \  >  /
+         '---'
+        /|   |\
+       * |   | *
+         |   |
+        _|   |_
+
+If the sites are up, the octo GLOWS.
+If they're down, the octo sulks.
