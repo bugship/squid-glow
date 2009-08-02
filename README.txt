@@ -7,7 +7,15 @@ I got tired of opening eight browser tabs to see if Digg, Twitter,
 and my shared host were still alive. So I wrote a squid that pings
 them for me.
 
-Status: early / probably broken on Windows
-Requires: Python 2.5+ (tested on 2.6, Ubuntu 9.04, Mac OS X 10.5)
+Usage
+-----
+    python glow.py
 
--- bugship, June 2009
+Requires
+--------
+* Python 2.5+ (tested on 2.6, Ubuntu 9.04, Mac OS X 10.5)
+* An internet connection (shocking, I know)
+
+No setuptools, no eggs, no "cloud". Just urllib2 and hope.
+
+-- bugship, August 2009
