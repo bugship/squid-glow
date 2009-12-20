@@ -19,3 +19,10 @@ Requires
 No setuptools, no eggs, no "cloud". Just urllib2 and hope.
 
 -- bugship, August 2009
+
+Options
+-------
+    python glow.py          # color output (default)
+    python glow.py --plain  # for terminals that hate joy
+
+Edit sites.conf to add your own URLs (Name|URL per line).
