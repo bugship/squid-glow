@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Glowing Octopus Dashboard</title>
+  <!-- Yes, a table layout. It is 2010. Flexbox is a rumor. -->
+  <style type="text/css">
+    body {
+      background: #0b1020 url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7') repeat;
+      color: #c8f7c5;
+      font-family: "Lucida Console", Monaco, monospace;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 { color: #7dffb3; text-shadow: 0 0 8px #2aff9a; }
+    table {
+      border-collapse: collapse;
+      width: 640px;
+      background: #121a33;
+    }
+    th, td {
+      border: 1px solid #2a3a66;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th { background: #1a274d; color: #9ad7ff; }
+    .glow { color: #5dff8a; font-weight: bold; }
+    .down { color: #ff6b6b; font-weight: bold; }
+    .footer { margin-top: 24px; color: #667; font-size: 12px; }
+    #octo { white-space: pre; color: #5ce1ff; }
+  </style>
+  <!-- jQuery from Google CDN was the height of sophistication -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript">
+    // Placeholder: in a real deploy you'd hit a CGI that runs glow.py
+    // For now we just make the header pulse like it's 2009 Web 2.0.
+    $(document).ready(function () {
+      var on = true;
+      setInterval(function () {
+        $("h1").css("opacity", on ? 1 : 0.55);
+        on = !on;
+      }, 800);
+    });
+  </script>
+</head>
+<body>
+  <h1>🐙 Glowing Octopus Status Board</h1>
+  <p>Web 2.0 edition &mdash; now with 20% more glow.</p>
+
+  <div id="octo">
+         .---.
+        / o o \
+        \  >  /
+         '---'
+        /|   |\
+       * |   | *
+  </div>
+
+  <table summary="Monitored endpoints">
+    <tr>
+      <th>Service</th>
+      <th>Status</th>
+      <th>Last check</th>
+      <th>Notes</th>
+    </tr>
+    <tr>
+      <td>Google</td>
+      <td class="glow">GLOWING</td>
+      <td>manual / sample</td>
+      <td>Still runs the internet, allegedly</td>
+    </tr>
+    <tr>
+      <td>Twitter</td>
+      <td class="glow">GLOWING</td>
+      <td>manual / sample</td>
+      <td>Fail Whale on vacation (for now)</td>
+    </tr>
+    <tr>
+      <td>Digg</td>
+      <td class="down">SULKING</td>
+      <td>manual / sample</td>
+      <td>v4 redesign energy</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td class="glow">GLOWING</td>
+      <td>manual / sample</td>
+      <td>Where this octopus lives</td>
+    </tr>
+  </table>
+
+  <p class="footer">
+    Generated vibes only. Wire this page to <code>glow.py</code> output if you
+    want real data. Best viewed in Firefox 3.6 or Chrome 5. IE6 users: I'm sorry.
+  </p>
+</body>
+</html>
