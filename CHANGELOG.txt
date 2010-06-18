@@ -1,0 +1,19 @@
+Glowing Octopus changelog
+=========================
+
+0.4 (2010-06-18)
+  - glow.sh wrapper for cron / lazy humans
+  - crontab.example
+
+0.3 (2009-12-20)
+  - ANSI colors + ASCII mascot
+  - --plain for colorless environments
+
+0.2 (2009-09-28)
+  - sites.conf external config
+
+0.1 (2009-08-02)
+  - First urllib2 checker
+
+0.0 (2009-06-15)
+  - Idea, mascot sketch, unjustified confidence

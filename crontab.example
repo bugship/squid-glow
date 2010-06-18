@@ -1,0 +1,4 @@
+# Drop this in crontab -e to check every 15 minutes and log the mood of the octo.
+# Mail yourself only when something is down (exit code != 0).
+
+*/15 * * * * /path/to/glowing-octo-invention/glow.sh --plain >> /var/log/glowing-octo.log 2>&1
