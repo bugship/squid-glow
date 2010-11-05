@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-glow.py — Glowing Octopus site checker
+glow.py — Squid Glow site checker
 Python 2.5+ compatible. No third-party deps. On purpose.
 
 New in 0.3: ANSI colors and a tiny ASCII mascot that smiles when
@@ -32,7 +32,6 @@ DEFAULT_SITES = [
     ("Twitter", "http://twitter.com/"),
 ]
 
-
 def load_sites(path):
     if not os.path.isfile(path):
         return DEFAULT_SITES
@@ -44,7 +43,6 @@ def load_sites(path):
         name, url = line.split("|", 1)
         sites.append((name.strip(), url.strip()))
     return sites or DEFAULT_SITES
-
 
 def check(url):
     start = datetime.now()
@@ -59,7 +57,6 @@ def check(url):
     except Exception, e:
         elapsed = (datetime.now() - start).microseconds / 1000
         return (False, str(e).split("\n")[0][:60], elapsed)
-
 
 def mascot(all_ok, colors):
     face = "o o" if all_ok else "x x"
@@ -80,12 +77,11 @@ def mascot(all_ok, colors):
         return RED + body + RESET
     return body
 
-
 def main(argv):
     use_color = "--plain" not in argv
     sites = load_sites(CONFIG)
 
-    title = "Glowing Octopus — %s" % datetime.now().strftime("%Y-%m-%d %H:%M")
+    title = "Squid Glow — %s" % datetime.now().strftime("%Y-%m-%d %H:%M")
     if use_color:
         print(BOLD + title + RESET)
     else:
@@ -120,7 +116,6 @@ def main(argv):
     msg = "%d/%d glowing. The octo is mildly concerned." % (glowing, total)
     print((YELLOW + msg + RESET) if use_color else msg)
     return 1
-
 
 if __name__ == "__main__":
     sys.exit(main(sys.argv[1:]))

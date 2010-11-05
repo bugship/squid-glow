@@ -1,5 +1,10 @@
-Glowing Octopus changelog
+Squid Glow changelog
 =========================
+
+0.5 (2010-11-05)
+  - tweet_status.py dry-run "integration"
+  - MIT LICENSE
+  - README polish / file map
 
 0.4 (2010-06-18)
   - glow.sh wrapper for cron / lazy humans
